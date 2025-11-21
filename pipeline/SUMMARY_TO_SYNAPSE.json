@@ -1,0 +1,46 @@
+{
+	"name": "SUMMARY_TO_SYNAPSE",
+	"properties": {
+		"activities": [
+			{
+				"name": "Data flow1",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "SUMMARY_to_SYNAPSE",
+						"type": "DataFlowReference",
+						"parameters": {
+							"parameter1": {
+								"value": "@pipeline().parameters.PARAM12",
+								"type": "Expression"
+							}
+						}
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"parameters": {
+			"PARAM12": {
+				"type": "int",
+				"defaultValue": 2021
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2025-11-21T05:43:30Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
