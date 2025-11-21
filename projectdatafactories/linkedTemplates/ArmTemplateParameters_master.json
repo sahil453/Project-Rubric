@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "projectdatafactories"
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"DataLakestorage_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "tcp:sahilsserver.database.windows.net,1433"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "projectsqldb"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "azureuser"
+		},
+		"DataLakestorage_properties_typeProperties_url": {
+			"value": "https://projectdatalake1.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
