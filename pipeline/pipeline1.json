@@ -190,7 +190,10 @@
 						"referenceName": "SUMMARY_TO_SQLDB",
 						"type": "DataFlowReference",
 						"parameters": {
-							"parameter1": 2021
+							"parameter1": {
+								"value": "@activity('Data flow1').output",
+								"type": "Expression"
+							}
 						}
 					},
 					"compute": {
@@ -201,6 +204,12 @@
 				}
 			}
 		],
+		"parameters": {
+			"param1": {
+				"type": "int",
+				"defaultValue": 2021
+			}
+		},
 		"annotations": []
 	}
 }
