@@ -913,7 +913,10 @@
 								"referenceName": "SUMMARY_TO_SQLDB",
 								"type": "DataFlowReference",
 								"parameters": {
-									"parameter1": 2021
+									"parameter1": {
+										"value": "@activity('Data flow1').output",
+										"type": "Expression"
+									}
 								},
 								"datasetParameters": {
 									"source1": {},
@@ -932,6 +935,12 @@
 				],
 				"policy": {
 					"elapsedTimeMetric": {}
+				},
+				"parameters": {
+					"param1": {
+						"type": "int",
+						"defaultValue": 2021
+					}
 				},
 				"annotations": []
 			},
